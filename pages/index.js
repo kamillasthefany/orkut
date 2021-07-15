@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import MainGrid from '../src/components/MainGrid';
 import Box from '../src/components/Box';
 import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
-import { AlurakutMenu, AlurakutProfileSidebarMenuDefault, OrkutNostalgicIconSet } from '../src/lib/AlurakutCommons';
+import { Menu } from '../src/components/Menu';
+import { ProfileSidebarMenu } from '../src/components/ProfileSidebarMenu';
+import { IconSet } from '../src/components/IconSet';
 
 function ProfileSideBar(props) {
-
   return (
     <Box>
-      <img src={`https://github.com/${props.githubUser}.png`} style={{ borderRadius: '5px' }} />
+      {/* <img src={`https://github.com/${props.githubUser}.png`} style={{ borderRadius: '5px' }} /> */}
+      <img src={`https://github.com/kamillasthefany.png`} style={{ borderRadius: '5px' }} />
       <hr />
       <p>
         <a className="boxLink" href={`https://github/${props.githubUser}`} >
@@ -16,7 +18,7 @@ function ProfileSideBar(props) {
         </a>
       </p>
       <hr />
-      <AlurakutProfileSidebarMenuDefault />
+      <ProfileSidebarMenu />
     </Box>
   )
 };
@@ -36,7 +38,7 @@ export default function Home() {
 
   return (
     <>
-      <AlurakutMenu />
+      <Menu />
       <MainGrid>
         <div style={{ gridArea: 'profileArea' }}>
           <ProfileSideBar githubUser={githubUser} />
@@ -46,7 +48,7 @@ export default function Home() {
             <h1 className="title">
               Bem vindo
             </h1>
-            <OrkutNostalgicIconSet />
+            <IconSet />
           </Box>
           <Box>
             <h2 className="subTitle">O que você deseja fazer?</h2>
