@@ -1,45 +1,41 @@
 import React from 'react';
 import { ProfileSidebarMenuWrapper } from './styles';
-import { ReactComponet as User } from '../../assets/icons/user.svg';
-import { ReactComponet as Book } from '../../assets/icons/book.svg';
-import { ReactComponet as Camera } from '../../assets/icons/camera.svg';
-import { ReactComponet as Sun } from '../../assets/icons/sun.svg';
-import { ReactComponet as Plus } from '../../assets/icons/plus.svg';
-import { ReactComponet as Logout } from '../../assets/icons/logout.svg';
-
-const BASE_URL = 'http://alurakut.vercel.app';
-const v = '1';
+import User from '../../assets/icons/user.svg';
+import Book from '../../assets/icons/book.svg';
+import Camera from '../../assets/icons/camera.svg';
+import Sun from '../../assets/icons/sun.svg';
+import Plus from '../../assets/icons/plus.svg';
+import Logout from '../../assets/icons/logout.svg';
 
 export function ProfileSidebarMenu() {
   return (
     <ProfileSidebarMenuWrapper>
       <nav>
-        {console.log(User)}
         <a href="/">
-          <img src={`${BASE_URL}/icons/user.svg`} />
+          <img src={User.src} />
           Perfil
         </a>
         <a href="/">
-          <img src={`${BASE_URL}/icons/book.svg`} />
+          <img src={Book.src} />
           Recados
         </a>
         <a href="/">
-          <img src={`${BASE_URL}/icons/camera.svg`} />
+          <img src={Camera.src} />
           Fotos
         </a>
         <a href="/">
-          <img src={`${BASE_URL}/icons/sun.svg`} />
+          <img src={Sun.src} />
           Depoimentos
         </a>
       </nav>
       <hr />
       <nav>
         <a href="/">
-          <img src={`${BASE_URL}/icons/plus.svg`} />
+          <img src={Plus.src} />
           GitHub Trends
         </a>
         <a href="/logout">
-          <img src={`${BASE_URL}/icons/logout.svg`} />
+          <img src={Logout.src} />
           Sair
         </a>
       </nav>

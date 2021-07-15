@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { MenuWrapper, MenuLogo } from './styles';
-import { ReactComponet as Logo } from '../../assets/icons/logo.svg';
-const BASE_URL = 'http://alurakut.vercel.app/';
 import NextLink from 'next/link';
+import { MenuWrapper, MenuLogo } from './styles';
+import Logo from '../../assets/icons/logo.svg';
+import MenuOpen from '../../assets/icons/menu-open.svg';
+import MenuClosed from '../../assets/icons/menu-closed.svg';
 import { ProfileSidebarMenu } from '../ProfileSidebarMenu';
-const v = '1';
-
 
 function Link({ href, children, ...props }) {
   return (
@@ -22,7 +21,7 @@ export function Menu({ githubUser }) {
   return (
     <MenuWrapper isMenuOpen={isMenuOpen}>
       <div className="container">
-        <MenuLogo src={Logo} />
+        <MenuLogo src={Logo.src} />
 
         <nav style={{ flex: 1 }}>
           {[{ name: 'Inicio', slug: '/' }, { name: 'Amigos', slug: '/amigos' }, { name: 'Comunidades', slug: '/comunidades' }].map((menuItem) => (
@@ -42,17 +41,17 @@ export function Menu({ githubUser }) {
         </nav>
 
         <button onClick={() => setMenuState(!isMenuOpen)}>
-          {isMenuOpen && <img src={`${BASE_URL}/icons/menu-open.svg?v=${v}`} />}
-          {!isMenuOpen && <img src={`${BASE_URL}/icons/menu-closed.svg?v=${v}`} />}
+          {isMenuOpen && <img src={MenuOpen.src} />}
+          {!isMenuOpen && <img src={MenuClosed.src} />}
         </button>
       </div>
+
+      {console.log(githubUser)}
       <ProfileSidebar githubUser={githubUser} />
     </MenuWrapper>
   )
 }
 
-
-//function AlurakutMenuProfileSidebar({ githubUser }) {
 function ProfileSidebar({ githubUser }) {
   return (
     <div className="alurakutMenuProfileSidebar">

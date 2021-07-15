@@ -9,8 +9,7 @@ import { IconSet } from '../src/components/IconSet';
 function ProfileSideBar(props) {
   return (
     <Box>
-      {/* <img src={`https://github.com/${props.githubUser}.png`} style={{ borderRadius: '5px' }} /> */}
-      <img src={`https://github.com/kamillasthefany.png`} style={{ borderRadius: '5px' }} />
+      <img src={`https://github.com/${props.githubUser}.png`} style={{ borderRadius: '5px' }} />
       <hr />
       <p>
         <a className="boxLink" href={`https://github/${props.githubUser}`} >

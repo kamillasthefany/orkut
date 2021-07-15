@@ -1,7 +1,7 @@
 import styled from 'styled-components'
+import Search from '../../assets/icons/search.svg';
 const BASE_URL = 'http://alurakut.vercel.app/';
 
-//AlurakutMenu.Wrapper = styled.header`
 export const MenuWrapper = styled.header`
   width: 100%;
   background-color: #404040;
@@ -112,7 +112,6 @@ export const MenuWrapper = styled.header`
   }
 `;
 
-//AlurakutMenu.Logo = styled.img`
 export const MenuLogo = styled.img`
   background-color: #ffffff;
   padding: 9px 14px;
